@@ -23,6 +23,13 @@ document
 
       // Decrease the amount from main balance
       UpdateMainBalance("current-main-balance", mainBalance, inputValue);
+
+      //added  transaction History
+      const campaignName = document.getElementById(
+        "noakhali_campaign_name"
+      ).innerText;
+
+      transactionHistory(campaignName, inputValue);
     } else {
       alert("invalid donation amount!!");
     }
@@ -47,6 +54,12 @@ document
 
       // Decrease the amount from main balance
       UpdateMainBalance("current-main-balance", mainBalance, inputValue);
+
+      //added  transaction History
+      const campaignName =
+        document.getElementById("feni_campaign_name").innerText;
+
+      transactionHistory(campaignName, inputValue);
     } else {
       alert("invalid donation amount!!");
     }
@@ -73,6 +86,12 @@ document
 
       // Decrease the amount from main balance
       UpdateMainBalance("current-main-balance", mainBalance, inputValue);
+      //added  transaction History
+      const campaignName = document.getElementById(
+        "quota_campaign_name"
+      ).innerText;
+
+      transactionHistory(campaignName, inputValue);
     } else {
       alert("invalid donation amount!!");
     }

@@ -27,3 +27,14 @@ function toggleButton(id) {
   //show the clicked one
   document.getElementById(id).classList.remove("hidden");
 }
+
+function transactionHistory(campaignName, inputValue) {
+  const section = document.createElement("section");
+  section.innerHTML = `
+       <section class="border border-gray-300 rounded-xl p-6">
+          <p class = "font-bold text-xl py-3">${inputValue} Taka is Donated for ${campaignName}</p>
+          <p class="text-gray-500">Date: ${new Date()}</p>
+        </section>
+      `;
+  document.getElementById("history").appendChild(section);
+}
