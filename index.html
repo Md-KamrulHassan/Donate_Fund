@@ -10,6 +10,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Tailwind customize style -->
     <script>
       tailwind.config = {
@@ -19,14 +20,24 @@
               clifford: "#da373d",
               primary_color: "#B4F461",
             },
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
           },
         },
       };
     </script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Donate Bangladesh</title>
   </head>
-  <body>
+  <body class="font-lexend">
     <!-- header section start -->
     <header class="bg-[#F9F7F3]">
       <!-- logo for mobile version -->
@@ -41,7 +52,7 @@
       <div class="flex items-center justify-between w-10/12 m-auto py-4">
         <!-- nav left start here -->
         <div class="">
-          <button class="btn px-5 bg-primary_color">
+          <button id="blog_btn" class="btn px-5 bg-primary_color">
             <a href="#">Blog</a>
           </button>
         </div>

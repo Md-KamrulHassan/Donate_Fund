@@ -1,3 +1,7 @@
+document.getElementById("blog_btn").addEventListener("click", function () {
+  window.location.href = "blog.html";
+});
+
 function donateInputBalance(id) {
   const inputValue = document.getElementById(id).value;
   const inputValueConvert = parseFloat(inputValue) || 0; //take 0 if parsefloat can't convert
