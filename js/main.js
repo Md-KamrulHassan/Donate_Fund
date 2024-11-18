@@ -19,3 +19,11 @@ function UpdateMainBalance(id, mainBalance, inputValue) {
   const UpdateMainBalance = mainBalance - inputValue;
   document.getElementById(id).innerText = UpdateMainBalance;
 }
+
+function toggleButton(id) {
+  // hide all
+  document.getElementById("donation").classList.add("hidden");
+  document.getElementById("history").classList.add("hidden");
+  //show the clicked one
+  document.getElementById(id).classList.remove("hidden");
+}

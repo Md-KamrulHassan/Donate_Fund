@@ -67,10 +67,14 @@
     <main class="w-10/12 m-auto px-8 my-16 md:my-20 space-y-8">
       <!-- Toggle Button -->
       <div class="text-center space-x-3">
-        <button class="btn hover:bg-primary_color bg-primary_color font-bold">
+        <button
+          id="donation-btn"
+          class="btn hover:bg-primary_color bg-primary_color font-bold"
+        >
           Donation
         </button>
         <button
+          id="history-btn"
           class="btn hover:bg-primary_color border border-gray-300 font-bold"
         >
           History
@@ -245,7 +249,7 @@
       </section>
       <!-- Donate Section Ends Here -->
       <!-- History Section Start here -->
-      <section id="history">
+      <section id="history" class="hidden">
         <h1>History</h1>
       </section>
 
