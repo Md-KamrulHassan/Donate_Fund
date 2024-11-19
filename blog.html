@@ -10,9 +10,162 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind customize style -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary_color: "#B4F461",
+            },
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <title>Document</title>
   </head>
-  <body>
-    <h1>Blog</h1>
+  <body class="font-lexend">
+    <header>
+      <nav class="bg-[#F9F7F3]">
+        <!-- logo for mobile version -->
+        <div
+          class="flex md:hidden items-center justify-center gap-3 mb-7 bg-white"
+        >
+          <img class="" src="images/logo.png" alt="logo" />
+          <span class="text-xl font-semibold">Donate Bangladesh</span>
+        </div>
+        <!-- logo for mobile ends here -->
+        <!-- navbar starts here -->
+        <div class="flex items-center justify-between w-10/12 m-auto py-4">
+          <!-- nav left start here -->
+          <div class="">
+            <button id="home_btn" class="btn px-5 bg-primary_color">
+              <a href="#">Home</a>
+            </button>
+          </div>
+          <!-- nav left end here -->
+          <!-- nav middle start here -->
+          <div class="hidden md:flex items-center gap-3">
+            <img class="w-6 md:w-9" src="images/logo.png" alt="logo" />
+            <span class="font-semibold">Donate Bangladesh</span>
+          </div>
+          <!-- nav middle end herere -->
+          <!-- nav right start here -->
+          <div class="flex gap-2">
+            <img src="images/coin.png" alt="" />
+            <span class="font-medium"
+              ><span id="current-main-balance"> 5500 </span> BDT</span
+            >
+          </div>
+          <!-- nav right end here -->
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-4/5 m-auto">
+      <h1 class="text-2xl font-bold my-3">Important FAQ</h1>
+      <section class="border border-gray-300 rounded-xl p-6">
+        <div class="join join-vertical w-full">
+          <!-- 1 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-semibold">
+              What is the Document Object Model (DOM)
+            </div>
+            <div class="collapse-content">
+              <p>
+                The Document Object Model (DOM) is a programming interface for
+                web documents. It represents the structure of an HTML or XML
+                document as a tree of objects, making it possible for
+                programming languages (like JavaScript) to interact with the
+                document.
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-semibold">
+              How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                To select an element from the DOM, you can use various
+                JavaScript methods depending on what you're looking for (like an
+                element's tag, ID, class, or other attributes). common methods
+                are: <br />
+                Use document.getElementById() to get an element with a specific
+                id attribute. <br />
+                Use document.getElementsByClassName() to get all elements with a
+                specific class. This returns an HTMLCollection (like an array,
+                but not exactly). <br />
+                Use document.getElementsByTagName() to get all elements with a
+                specific tag name (e.g. &lt;p&gt;,&lt;div&gt;) 
+              
+           
+                
+               
+                  . <br />
+                  document.querySelector(): Selects the first matching element.
+                  <br />
+                  document.querySelectorAll(): Selects all matching elements. It
+                  returns a NodeList, which can be iterated over.
+                </p>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div
+              class="collapse collapse-arrow join-item border-base-300 border"
+            >
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-semibold">
+                What is event delegation in the context of the DOM, and why is it useful?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  Event delegation is a technique in DOM manipulation where you take advantage of event bubbling to handle events for multiple child elements by attaching a single event listener to their parent. This eliminates the need to add individual event listeners to each child element.
+                </p>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div
+              class="collapse collapse-arrow join-item border-base-300 border"
+            >
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-semibold">
+                How do you manipulate an element's attributes and styles using the DOM?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  <span class="font-bold">Manipulating Attributes:</span> <br>
+                  1.Use the getAttribute() method to retrieve the value of an attribute. <br>
+                  2.Use the setAttribute() method to modify or add an attribute. <br>
+                  3. Use the removeAttribute() method to remove an attribute.
+                  4. For standard attributes (e.g. href,target), you can manipulate them directly as properties. <br> <br>
+                  <span class="font-bold">Manipulating Styles:</span> <br>
+                  1.The style property allows you to set individual CSS properties. Use camelCase for multi-word properties. (e.g. div.style.backgroundColor = "blue";) <br>
+                  2.For computed styles (e.g., styles applied via CSS files or inherited), use getComputedStyle() <br>
+                  3. Using classes (e.g. node.classList.add,remove,toggle,contains) is a better approach for managing styles, as it keeps your CSS centralized.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // going to home page (from blod)
+      document
+        .getElementById("home_btn")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+          console.log("hel");
+        });
+    </script>
   </body>
 </html>

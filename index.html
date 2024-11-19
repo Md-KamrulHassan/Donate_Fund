@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Tailwind and DaisyUI cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
@@ -27,9 +30,7 @@
         },
       };
     </script>
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
@@ -39,45 +40,44 @@
   </head>
   <body class="font-lexend">
     <!-- header section start -->
-    <header class="bg-[#F9F7F3]">
-      <!-- logo for mobile version -->
-      <div
-        class="flex md:hidden items-center justify-center gap-3 mb-7 bg-white"
-      >
-        <img class="" src="images/logo.png" alt="logo" />
-        <span class="text-xl font-semibold">Donate Bangladesh</span>
-      </div>
-      <!-- logo for mobile ends here -->
-      <!-- navbar starts here -->
-      <div class="flex items-center justify-between w-10/12 m-auto py-4">
-        <!-- nav left start here -->
-        <div class="">
-          <button id="blog_btn" class="btn px-5 bg-primary_color">
-            <a href="#">Blog</a>
-          </button>
+    <header class="sticky backdrop-blur-lg top-0">
+      <nav class="bg-[#F9F7F3]">
+        <!-- logo for mobile version -->
+        <div
+          class="flex md:hidden items-center justify-center gap-3 mb-7 bg-white"
+        >
+          <img class="" src="images/logo.png" alt="logo" />
+          <span class="text-xl font-semibold">Donate Bangladesh</span>
         </div>
-        <!-- nav left end here -->
-        <!-- nav middle start here -->
-        <div class="hidden md:flex items-center gap-3">
-          <img class="w-6 md:w-9" src="images/logo.png" alt="logo" />
-          <span class="font-semibold">Donate Bangladesh</span>
+        <!-- logo for mobile ends here -->
+        <!-- navbar starts here -->
+        <div class="flex items-center justify-between w-10/12 m-auto py-4">
+          <!-- nav left start here -->
+          <div class="">
+            <button id="blog_btn" class="btn px-5 bg-primary_color">
+              <a href="#">Blog</a>
+            </button>
+          </div>
+          <!-- nav left end here -->
+          <!-- nav middle start here -->
+          <div class="hidden md:flex items-center gap-3">
+            <img class="w-6 md:w-9" src="images/logo.png" alt="logo" />
+            <span class="font-semibold">Donate Bangladesh</span>
+          </div>
+          <!-- nav middle end herere -->
+          <!-- nav right start here -->
+          <div class="flex gap-2">
+            <img src="images/coin.png" alt="" />
+            <span class="font-medium"
+              ><span id="current-main-balance"> 5500 </span> BDT</span
+            >
+          </div>
+          <!-- nav right end here -->
         </div>
-        <!-- nav middle end herere -->
-        <!-- nav right start here -->
-        <div class="flex gap-2">
-          <img src="images/coin.png" alt="" />
-          <span class="font-medium"
-            ><span id="current-main-balance"> 5500 </span> BDT</span
-          >
-        </div>
-        <!-- nav right end here -->
-      </div>
+      </nav>
       <!-- navbar end here -->
-    </header>
-    <!-- main start here -->
-    <main class="w-10/12 m-auto px-8 my-16 md:my-20 space-y-8">
       <!-- Toggle Button -->
-      <div class="text-center space-x-3">
+      <div class="text-center space-x-3 mt-16 pb-4">
         <button
           id="donation-btn"
           class="btn hover:bg-primary_color bg-primary_color font-bold"
@@ -92,6 +92,9 @@
         </button>
       </div>
       <!-- Toggle button ends here -->
+    </header>
+    <!-- main start here -->
+    <main class="w-10/12 m-auto px-8 my-8">
       <!-- donate section start here -->
       <section id="donation" class="space-y-5">
         <!-- Noakhali section starts here -->
